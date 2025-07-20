@@ -10,6 +10,9 @@ class Category(models.Model):
     created_time = models.DateTimeField(_('created_time'), auto_now_add=True)
     updated_time = models.DateTimeField(_('updated_time'), auto_now=True)
     
+    def __str__(self) -> str:
+        return self.title
+    
     class Meta:
         db_table = 'categories'
         verbose_name = _('Category')
